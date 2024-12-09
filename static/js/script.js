@@ -22,21 +22,16 @@ function DiventaRosso() {
     setTimeout(function() {
         luce4.classList.replace("spenta", "rosso");
     }, 4300);
-
-
 }
  
 
 function DiventaVerde(){
-
     luce1.classList.replace("rosso", "verde");
     luce2.classList.replace("rosso", "verde");
     luce3.classList.replace("rosso", "verde");
     luce4.classList.replace("rosso", "verde");
-
     wait = true; 
     startTime = Date.now(); 
-
 }
 
 
@@ -48,6 +43,19 @@ function resetLuci() {
     wait = false; 
     start.disabled = false;
 }
+
+
+
+let start = document.querySelector("#start");
+let luce1 = document.querySelector("#luce-1");
+let luce2 = document.querySelector("#luce-2");
+let luce3 = document.querySelector("#luce-3");
+let luce4 = document.querySelector("#luce-4");
+let type = document.querySelector("#riflessi");
+let typeTime = document.querySelector("#time");
+let wait = false; 
+let startTime;
+
 
 start.addEventListener("click", function () {
     if (!wait) {
@@ -66,13 +74,3 @@ start.addEventListener("click", function () {
     }
 });
 
-
-let start = document.querySelector("#start");
-let luce1 = document.querySelector("#luce-1");
-let luce2 = document.querySelector("#luce-2");
-let luce3 = document.querySelector("#luce-3");
-let luce4 = document.querySelector("#luce-4");
-let type = document.querySelector("#riflessi");
-let typeTime = document.querySelector("#time");
-let wait = false; 
-let startTime;
